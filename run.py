@@ -10,4 +10,4 @@ print response_url
 print abort_url
 
 
-r = requests.post(response_url, data={"result_text" : 'my error string'})
+r = requests.post(response_url, data={"result_text" : 'some result string'})
