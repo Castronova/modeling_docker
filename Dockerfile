@@ -1,16 +1,10 @@
-from ubuntu
-
 RUN apt-get update
 
-# install libraries
-RUN sudo apt-get -y install pandoc curl
+ADD . /home/docker
 
-# mount point
-RUN mkdir -p /host
-WORKDIR /host
+RUN pip install requests
 
-WORKDIR /src
-ADD . /src
+WORKDIR /home/docker
 
 CMD /bin/bash pandoc.sh
 
