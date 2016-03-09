@@ -1,8 +1,17 @@
+FROM ubuntu
+
+MAINTAINER Jefferson Heard
+
+# generic OS update
 RUN apt-get update
 
-ADD . /home/docker
+# install pandoc
+RUN sudo apt-get -y install pandoc curl
 
-WORKDIR /home/docker
+# mount point
+RUN mkdir -p /host
+WORKDIR /host
 
-CMD /bin/bash run.sh
-
+# show how we built it
+WORKDIR /src
+ADD . /src
