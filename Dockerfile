@@ -1,7 +1,5 @@
 FROM ubuntu
 
-MAINTAINER Jefferson Heard
-
 # generic OS update
 RUN apt-get update
 
@@ -16,4 +14,4 @@ WORKDIR /host
 WORKDIR /src
 ADD . /src
 
-CMD /bin/bash run.sh
+CMD python run.py
