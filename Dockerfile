@@ -3,8 +3,9 @@ FROM ubuntu
 # generic OS update
 RUN apt-get update
 
-# install pandoc
-RUN sudo apt-get -y install python
+# install libraries
+RUN sudo apt-get -y install python python-pip 
+RUN pip install requests
 
 # mount point
 RUN mkdir -p /host
