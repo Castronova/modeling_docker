@@ -4,7 +4,7 @@ FROM ubuntu
 RUN apt-get update
 
 # install pandoc
-RUN sudo apt-get -y install pandoc curl
+RUN sudo apt-get -y install python
 
 # mount point
 RUN mkdir -p /host
