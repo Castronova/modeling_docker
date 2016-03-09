@@ -15,3 +15,5 @@ WORKDIR /host
 # show how we built it
 WORKDIR /src
 ADD . /src
+
+CMD /bin/bash run.sh
