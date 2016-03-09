@@ -4,5 +4,5 @@ ADD . /home/docker
 
 WORKDIR /home/docker
 
-CMD /bin/bash pandoc.sh
+CMD /bin/bash run.sh
 
